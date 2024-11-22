@@ -1,0 +1,478 @@
+[
+    {
+        "id": "2efa71cec3bda072",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2fb7e130596c4eaf",
+        "type": "ui_gauge",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "group": "85abc69e4d9cd734",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1190,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6ae2a73bb3b641e7",
+        "type": "ui_button",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "group": "fb5e5d06336c8412",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Ligar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Ligado",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 810,
+        "y": 500,
+        "wires": [
+            [
+                "6432a7c0c113d8ed"
+            ]
+        ]
+    },
+    {
+        "id": "6432a7c0c113d8ed",
+        "type": "ui_toast",
+        "z": "2efa71cec3bda072",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "msg.ligado",
+        "topic": "",
+        "name": "",
+        "x": 1110,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91ee5b45db80cda5",
+        "type": "ui_toast",
+        "z": "2efa71cec3bda072",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "msg.Desligado",
+        "topic": "",
+        "name": "",
+        "x": 1110,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e1e2616eb3e62df",
+        "type": "ui_button",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "group": "fb5e5d06336c8412",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Desligar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Desligado",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 820,
+        "y": 560,
+        "wires": [
+            [
+                "91ee5b45db80cda5"
+            ]
+        ]
+    },
+    {
+        "id": "2c3ac7fbcac1fcc6",
+        "type": "ui_gauge",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "group": "85abc69e4d9cd734",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Umidade do Ar",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1180,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "72b00d8e5fa744bb",
+        "type": "ui_dropdown",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Itens salvos",
+        "group": "7f6d516f234d95e1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "Quarto ",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Sala",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Cozinha",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Banheiro",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1160,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8cd68e5a4a531ef8",
+        "type": "ui_date_picker",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "label": "Datas",
+        "group": "7f6d516f234d95e1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1150,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e73b977f3f4b4bf",
+        "type": "change",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 160,
+        "wires": [
+            [
+                "2fb7e130596c4eaf"
+            ]
+        ]
+    },
+    {
+        "id": "575ff98fd1dc9cc7",
+        "type": "change",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 240,
+        "wires": [
+            [
+                "2c3ac7fbcac1fcc6"
+            ]
+        ]
+    },
+    {
+        "id": "f0337e6cc410bdea",
+        "type": "change",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 400,
+        "wires": [
+            [
+                "8cd68e5a4a531ef8"
+            ]
+        ]
+    },
+    {
+        "id": "fa99fee747f862a0",
+        "type": "change",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 340,
+        "wires": [
+            [
+                "72b00d8e5fa744bb"
+            ]
+        ]
+    },
+    {
+        "id": "51b6569494970ebe",
+        "type": "http request",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.openweathermap.org/data/2.5/weather?q=sao+paulo&appid=ae10626011dbb050cfebc1ffa52f7829&units=metric&lang=pt_br",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "11a0775748443994"
+            ]
+        ]
+    },
+    {
+        "id": "11a0775748443994",
+        "type": "json",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "8e73b977f3f4b4bf",
+                "575ff98fd1dc9cc7",
+                "fa99fee747f862a0",
+                "f0337e6cc410bdea",
+                "6ae2a73bb3b641e7",
+                "1e1e2616eb3e62df"
+            ]
+        ]
+    },
+    {
+        "id": "5c1ca24ff61c22e1",
+        "type": "inject",
+        "z": "2efa71cec3bda072",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "51b6569494970ebe"
+            ]
+        ]
+    },
+    {
+        "id": "9460c120ab936ebd",
+        "type": "ui_spacer",
+        "z": "2efa71cec3bda072",
+        "name": "spacer",
+        "group": "85abc69e4d9cd734",
+        "order": 3,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "85abc69e4d9cd734",
+        "type": "ui_group",
+        "name": "temperatura",
+        "tab": "80d2618372e32ed2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fb5e5d06336c8412",
+        "type": "ui_group",
+        "name": "AR",
+        "tab": "7de05e61553d50d4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f6d516f234d95e1",
+        "type": "ui_group",
+        "name": "Casa",
+        "tab": "10a7f4b4b9353458",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "80d2618372e32ed2",
+        "type": "ui_tab",
+        "name": "Menu",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7de05e61553d50d4",
+        "type": "ui_tab",
+        "name": "Função",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "10a7f4b4b9353458",
+        "type": "ui_tab",
+        "name": "Mais",
+        "icon": "Datas",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]

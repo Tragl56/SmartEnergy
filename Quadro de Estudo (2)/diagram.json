@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "author": "luiz felipe tragl",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -252.6, "left": -26, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -197.65,
+      "left": -115.2,
+      "rotate": 270,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -316.5,
+      "left": -15,
+      "attrs": { "temperature": "10.2" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -293.6,
+      "left": 223.02,
+      "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -176.4, "left": 119, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -102.2,
+      "left": 104.75,
+      "rotate": 270,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:bp.1", "red", [ "v19.7", "h-160", "v-278.4" ] ],
+    [ "uno:GND.2", "bb1:bn.1", "black", [ "v57.5", "h-149.7" ] ],
+    [ "bb1:bp.2", "bb1:1t.e", "green", [ "v0" ] ],
+    [ "bb1:bn.2", "bb1:4t.e", "green", [ "v0" ] ],
+    [ "bb1:bp.25", "bb1:28t.e", "green", [ "v0" ] ],
+    [ "bb1:bn.25", "bb1:30t.e", "green", [ "v0" ] ],
+    [ "uno:2", "bb1:2t.d", "green", [ "v0" ] ],
+    [ "r1:2", "bb1:1t.b", "green", [ "v0" ] ],
+    [ "r1:1", "bb1:2t.c", "green", [ "h0" ] ],
+    [ "uno:3", "bb1:29t.d", "green", [ "v0" ] ],
+    [ "r2:1", "bb1:bp.12", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:15b.g", "", [ "$bb" ] ],
+    [ "uno:4", "bb1:16b.j", "green", [ "v-57.6", "h-72.9" ] ],
+    [ "led1:A", "bb1:16b.f", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:15b.f", "", [ "$bb" ] ],
+    [ "dht1:VCC", "bb1:1t.a", "", [ "$bb" ] ],
+    [ "dht1:SDA", "bb1:2t.a", "", [ "$bb" ] ],
+    [ "dht1:NC", "bb1:3t.a", "", [ "$bb" ] ],
+    [ "dht1:GND", "bb1:4t.a", "", [ "$bb" ] ],
+    [ "pir1:VCC", "bb1:28t.a", "", [ "$bb" ] ],
+    [ "pir1:OUT", "bb1:29t.a", "", [ "$bb" ] ],
+    [ "pir1:GND", "bb1:30t.a", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}

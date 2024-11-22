@@ -1,6 +1,10 @@
 # Projeto de Monitoramento de Temperatura e Movimento com Sensor DHT22 e PIR 
 ## Projeto SmartEnergy
 
+## API: https://api.openweathermap.org/data/2.5/weather?q=sao+paulo&appid=ae10626011dbb050cfebc1ffa52f7829&units=metric&lang=pt_br
+
+
+
 ## Descrição
 Este projeto monitora temperatura, umidade e movimento utilizando os sensores **DHT22** e **PIR**, além de um LED que simula o acionamento de um ar-condicionado. O sistema é controlado por um microcontrolador, como o Arduino, e realiza ações com base nas condições detectadas.
 
