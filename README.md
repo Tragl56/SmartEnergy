@@ -5,6 +5,15 @@
 ## Youtube:https://youtu.be/hy1i13rSzSU
 
 
+|Rm|Nome|Turma
+|--|--|--|
+RM99503|Arthur Koga|TDSA
+RM552254|Gabriel Benjamim|TDSA
+RM550684|Henry Ribeiro|TDSR
+RM99538|Murilo José|TDSR
+RM99476|Luiz Felipe dos Santos|TDSA
+
+
 
 ## Descrição
 Este projeto monitora temperatura, umidade e movimento utilizando os sensores **DHT22** e **PIR**, além de um LED que simula o acionamento de um ar-condicionado. O sistema é controlado por um microcontrolador, como o Arduino, e realiza ações com base nas condições detectadas.
