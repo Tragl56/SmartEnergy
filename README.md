@@ -50,5 +50,5 @@ Este projeto monitora temperatura, umidade e movimento utilizando os sensores **
 - Conecte o sensor DHT22 ao pino digital 2.
 - Conecte o LED ao pino digital 4 (com um resistor apropriado).
 
-### Dashboard (Opcional)
+### Dashboard
 - Use Node-RED para criar um dashboard visual exibindo os valores de temperatura e umidade.
